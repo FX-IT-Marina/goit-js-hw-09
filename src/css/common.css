@@ -16,3 +16,27 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.label,
+.value {
+  font-size: 40px;
+  color: palevioletred;
+  font-weight: 600;
+}
+
+input,
+button {
+  font-size: 40px;
+  color: purple;
+  font-weight: 900;
+}

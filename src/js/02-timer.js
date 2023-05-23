@@ -27,7 +27,7 @@ const options = {
     const deltaTime = currentDate - chooseDate;
     // allert window
     if (deltaTime >= 0) {
-      Notiflix.Notify.info('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future');
     } else {
       refs.startBtn.disabled = false;
     }
@@ -92,8 +92,8 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 function clockUpdate(days, hours, minutes, seconds) {
-  refs.dataDays.textContent = days;
-  refs.dataHours.textContent = hours;
-  refs.dataMinutes.textContent = minutes;
-  refs.dataSeconds.textContent = seconds;
+  refs.dataDays.textContent = addLeadingZero(days);
+  refs.dataHours.textContent = addLeadingZero(hours);
+  refs.dataMinutes.textContent = addLeadingZero(minutes);
+  refs.dataSeconds.textContent = addLeadingZero(seconds);
 }

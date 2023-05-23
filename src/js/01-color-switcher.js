@@ -17,18 +17,17 @@ function getRandomHexColor() {
 // Add listener. setInerval (callback, delay, arg...)
 
 startBtn.addEventListener('click', () => {
-  //   timerId = null;
-  if (timerId) {
-    startBtn.disabled = true;
-  }
   timerId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
     console.log('start');
   }, 1000);
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
 });
 
 stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
   startBtn.disabled = false;
+  stopBtn = true;
   console.log('stop');
 });

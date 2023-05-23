@@ -27,16 +27,18 @@ img {
   align-items: center;
   flex-direction: column;
 }
-.label,
-.value {
+.label {
   font-size: 40px;
-  color: palevioletred;
-  font-weight: 600;
+  color: black;
 }
 
+.value {
+  font-size: 40px;
+  font-weight: 700;
+  color: red;
+}
 input,
 button {
   font-size: 40px;
-  color: purple;
-  font-weight: 900;
+  color: black;
 }
